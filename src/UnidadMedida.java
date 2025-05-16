@@ -1,2 +1,2 @@
-public class UnidadMedida {
-}
+public class UnidadMedida { }
+

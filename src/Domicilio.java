@@ -1,2 +1,2 @@
-public class Domicilio {
-}
+public class Domicilio { }
+
