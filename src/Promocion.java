@@ -32,7 +32,6 @@ public class Promocion {
         this.tipoPromocion = tipoPromocion;
         imagenes = new HashSet<>();
         articulos = new HashSet<>();
-        this.imagenPromocional = imagenPromocional;
         this.articulos = articulos;
     }
 

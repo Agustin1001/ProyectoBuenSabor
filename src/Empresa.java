@@ -47,6 +47,5 @@ public class Empresa {
     public String toString() {
         return "Empresa [" + "nombre=" + nombre + ", razonSocial=" + razonSocial + ", cuil=" + cuil +"]"+"\n"+
                 "Sucursales = " +"\n"+ sucursales ;
-                "Sucursales = " + sucursales ;
     }
 }

@@ -13,6 +13,7 @@ public class UnidadMedida {
 
     public void setDenominacion(String denominacion) {
         this.denominacion = denominacion;
+    }
 
     @Override
     public String toString() {
