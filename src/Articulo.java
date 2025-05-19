@@ -42,6 +42,9 @@ public abstract class Articulo {
             this.listaImagenes.remove(imagen);
         }
     }
+    public String getDenominacion() {
+        return denominacion;
+    }
 
     @Override
     public String toString() {
