@@ -6,9 +6,9 @@ public class ArticuloInsumo extends Articulo {
 
     public ArticuloInsumo() {}
 
-    public ArticuloInsumo(String denominacion, double precioVenta, double precioCompre, int stockActual, int stockMaximo, boolean esParaElaborar) {
-        super(denominacion, precioVenta);
-        this.precioCompra = precioCompre;
+    public ArticuloInsumo(String denominacion, double precioVenta, double precioCompra, int stockActual, int stockMaximo, boolean esParaElaborar, UnidadMedida unidadMedida) {
+        super(denominacion, precioVenta, unidadMedida);
+        this.precioCompra = precioCompra;
         this.stockActual = stockActual;
         this.stockMaximo = stockMaximo;
         this.esParaElaborar = esParaElaborar;
@@ -16,6 +16,6 @@ public class ArticuloInsumo extends Articulo {
 
     @Override
     public String toString() {
-        return denominacion + "," + unidadMedida + ", precioCompra=" + precioCompra + ", precioVenta=" + precioVenta + ", stockActual=" + stockActual + ", stockMaximo=" + stockMaximo + ", esParaElaborar=" + esParaElaborar + "]";
+        return denominacion + "," + unidadMedida + ", precioCompra=" + precioCompra + ", precioVenta=" + precioVenta + ", stockActual=" + stockActual + ", stockMaximo=" + stockMaximo + ", esParaElaborar=" + esParaElaborar +"]";
     }
 }

@@ -15,3 +15,4 @@ public class Usuario {
         return "[ Id='" + auth0Id + ", username='" + username + "]";
     }
 }
+
