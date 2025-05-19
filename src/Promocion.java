@@ -32,6 +32,8 @@ public class Promocion {
         this.tipoPromocion = tipoPromocion;
         imagenes = new HashSet<>();
         articulos = new HashSet<>();
+        this.imagenPromocional = imagenPromocional;
+        this.articulos = articulos;
     }
 
 // Metodos
@@ -43,6 +45,32 @@ public class Promocion {
         articulos.add(articulo);
     }
 
+      public void agregarImagen (Imagen imagen){
+        if (imagenes==null){
+            imagenes=new HashSet<>();
+        }
+        imagenes.add(imagen);
+    }
+      public void eliminarImagen(Imagen imagen) {
+        if (imagenes!=null){
+            imagenes.remove(imagen);
+        }
+    }
+
+    public void agregarArticulo(Articulo articulo) {
+
+        if (articulos==null){
+            articulos=new HashSet<>();
+        }
+            articulos.add(articulo);
+    }
+
+
+    public void eliminarArticulo (Articulo articulo) {
+        if (articulos !=null){
+            articulos.remove(articulo);
+        }
+    }
 // Getters y Setters
 
 
@@ -105,38 +133,11 @@ public class Promocion {
 
     public void setTipoPromocion(TipoPromocion tipoPromocion) {this.tipoPromocion = tipoPromocion;}
 
-    public void agregarImagen (Imagen imagen){
-        if (imagenes==null){
-            imagenes=new HashSet<>();
-        }
-        imagenes.add(imagen);
-    }
-
-    public void eliminarImagen(Imagen imagen) {
-        if (imagenes!=null){
-            imagenes.remove(imagen);
-        }
-    }
-
-    public void agregarArticulo(Articulo articulo) {
-
-        if (articulos==null){
-            articulos=new HashSet<>();
-        }
-            articulos.add(articulo);
-    }
-
-
-    public void eliminarArticulo (Articulo articulo) {
-        if (articulos !=null){
-            articulos.remove(articulo);
-        }
-    }
-
     @Override
     public String toString() {
         return " denominacion='" + denominacion + ", fechaDesde=" + fechaDesde + ", fechaHasta=" + fechaHasta + ", horaDesde=" + horaDesde + ", horaHasta=" + horaHasta + ", descripcion='" + descripcionDescuento + ", precioPromocional=" + precioPromocional + ", tipoPromocion=" + tipoPromocion + "\n" +
                 "   Imagenes=" + imagenes + "\n" +
                 "   ListaArticulos=" + articulos;
     }
+
 }

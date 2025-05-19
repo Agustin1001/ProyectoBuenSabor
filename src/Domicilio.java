@@ -7,7 +7,11 @@ public class Domicilio {
     public Domicilio() {
     }
 
-
+    public Domicilio(String calle, Integer numero, Integer cp) {
+        this.calle = calle;
+        this.numero = numero;
+        this.cp = cp;
+    }
     public Domicilio(String calle, Integer numero, Integer cp, Localidad localidad) {
         this.calle = calle;
         this.numero = numero;

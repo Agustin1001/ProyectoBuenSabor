@@ -14,7 +14,12 @@ public class Empresa {
         this.cuil = cuil;
         this.sucursales = new HashSet<>();
     }
-
+    public Empresa(String nombre, String razonSocial, Integer cuil,Sucursal sucursales) {
+        this.nombre = nombre;
+        this.razonSocial = razonSocial;
+        this.cuil = cuil;
+        this.agregarSucursal(sucursales);
+    }
 
     public void agregarSucursal(Sucursal sucursal) {
         if(sucursales == null) {
@@ -28,10 +33,20 @@ public class Empresa {
         }
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+    public String getRazonSocial() {
+        return razonSocial;
+    }
+    public Integer getCuil() {
+        return cuil;
+    }
 
     @Override
     public String toString() {
         return "Empresa [" + "nombre=" + nombre + ", razonSocial=" + razonSocial + ", cuil=" + cuil +"]"+"\n"+
                 "Sucursales = " +"\n"+ sucursales ;
+                "Sucursales = " + sucursales ;
     }
 }

@@ -12,4 +12,11 @@ public class Imagen {
     public String toString() {
         return "[ denominacion=" + denominacion + "]";
     }
+    public String getDenominacion() {
+        return denominacion;
+    }
+
+    public void setDenominacion(String denominacion) {
+        this.denominacion = denominacion;
+    }
 }

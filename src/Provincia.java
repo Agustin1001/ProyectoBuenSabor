@@ -4,8 +4,6 @@ public class Provincia {
 
     public Provincia() {
     }
-
-
     public Provincia(String nombre, Pais pais) {
         this.nombre = nombre;
         this.pais = pais;

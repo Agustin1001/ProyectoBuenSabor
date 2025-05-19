@@ -1,11 +1,18 @@
 public class UnidadMedida {
     private String denominacion;
 
-    private UnidadMedida() {
+    public UnidadMedida() {
     }
 
     public UnidadMedida(String denominacion) {
     }
+  
+    public String getDenominacion() {
+        return denominacion;
+    }
+
+    public void setDenominacion(String denominacion) {
+        this.denominacion = denominacion;
 
     @Override
     public String toString() {

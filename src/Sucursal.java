@@ -12,8 +12,6 @@ public class Sucursal {
     private Set<Promocion> promociones;
 
     public Sucursal() {}
-
-
     public Sucursal(String nombre, LocalTime horarioApertura, LocalTime horarioCierre, Domicilio domicilio) {
         this.nombre = nombre;
         this.horarioApertura = horarioApertura;

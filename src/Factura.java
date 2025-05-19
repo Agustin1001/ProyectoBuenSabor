@@ -11,7 +11,6 @@ public class Factura {
 
     public Factura() {
     }
-
     public Factura(LocalDate fechaFacturacion, Integer mpPaymentId, Integer mpMerchantOrderId, String mpPreferenceId,
                    String mpPaymentType, FormaPago formaPago, Double totalVenta) {
         this.fechaFacturacion = fechaFacturacion;
@@ -34,4 +33,33 @@ public class Factura {
                 "  formaPago=" + formaPago + "\n" +
                 "  totalVenta=" + totalVenta + "\n";
     }
+
+    public LocalDate getFechaFacturacion() {return fechaFacturacion;}
+
+    public void setFechaFacturacion(LocalDate fechaFacturacion) {this.fechaFacturacion = fechaFacturacion;}
+
+    public int getMpPaymetid() {return mpPaymetid;}
+
+    public void setMpPaymetid(int mpPaymetid) {this.mpPaymetid = mpPaymetid;}
+
+    public int getMpMechantOrderId() {return mpMechantOrderId;}
+
+    public void setMpMechantOrderId(int mpMechantOrderId) {this.mpMechantOrderId = mpMechantOrderId;}
+
+    public String getMpPreferenceId() {return mpPreferenceId;}
+
+    public void setMpPreferenceId(String mpPreferenceId) {this.mpPreferenceId = mpPreferenceId;}
+
+    public String getMpPaymenType() {return mpPaymenType;}
+
+    public void setMpPaymenType(String mpPaymenType) {this.mpPaymenType = mpPaymenType;}
+
+    public FormaPago getFormaPago() {return formaPago;}
+
+    public void setFormaPago(FormaPago formaPago) {this.formaPago = formaPago;}
+
+    public double getTotalVenta() {return totalVenta;}
+
+    public void setTotalVenta(double totalVenta) {this.totalVenta = totalVenta;}
+
 }
