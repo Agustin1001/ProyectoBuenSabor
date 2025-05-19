@@ -12,7 +12,7 @@ public class Promocion {
     private String descripcionDescuento;
     private Double precioPromocional;
     private TipoPromocion tipoPromocion;
-    private Imagen imagenPromocional;
+    private Set<Imagen> imagenes;
     private Set<Articulo>articulos;
 
 // Constructores
@@ -21,17 +21,7 @@ public class Promocion {
 
     }
 
-    public Promocion(LocalDate fechaDesde, LocalDate fechaHasta, LocalTime horaDesde, LocalTime horaHasta, String descripcionDescuento, Double precioPromocional, Imagen imagenPromocional) {
-        this.fechaDesde = fechaDesde;
-        this.fechaHasta = fechaHasta;
-        this.horaDesde = horaDesde;
-        this.horaHasta = horaHasta;
-        this.descripcionDescuento = descripcionDescuento;
-        this.precioPromocional = precioPromocional;
-        this.imagenPromocional = imagenPromocional;
-    }
-
-    public Promocion(String denominacion, LocalDate fechaDesde, LocalDate fechaHasta, LocalTime horaDesde, LocalTime horaHasta, String descripcionDescuento, Double precioPromocional, TipoPromocion tipoPromocion, Imagen imagenPromocional, Set<Articulo> articulos) {
+    public Promocion(String denominacion, LocalDate fechaDesde, LocalDate fechaHasta, LocalTime horaDesde, LocalTime horaHasta, String descripcionDescuento, Double precioPromocional, TipoPromocion tipoPromocion) {
         this.denominacion = denominacion;
         this.fechaDesde = fechaDesde;
         this.fechaHasta = fechaHasta;
@@ -40,6 +30,8 @@ public class Promocion {
         this.descripcionDescuento = descripcionDescuento;
         this.precioPromocional = precioPromocional;
         this.tipoPromocion = tipoPromocion;
+        imagenes = new HashSet<>();
+        articulos = new HashSet<>();
         this.imagenPromocional = imagenPromocional;
         this.articulos = articulos;
     }
@@ -53,6 +45,32 @@ public class Promocion {
         articulos.add(articulo);
     }
 
+      public void agregarImagen (Imagen imagen){
+        if (imagenes==null){
+            imagenes=new HashSet<>();
+        }
+        imagenes.add(imagen);
+    }
+      public void eliminarImagen(Imagen imagen) {
+        if (imagenes!=null){
+            imagenes.remove(imagen);
+        }
+    }
+
+    public void agregarArticulo(Articulo articulo) {
+
+        if (articulos==null){
+            articulos=new HashSet<>();
+        }
+            articulos.add(articulo);
+    }
+
+
+    public void eliminarArticulo (Articulo articulo) {
+        if (articulos !=null){
+            articulos.remove(articulo);
+        }
+    }
 // Getters y Setters
 
 
@@ -115,7 +133,11 @@ public class Promocion {
 
     public void setTipoPromocion(TipoPromocion tipoPromocion) {this.tipoPromocion = tipoPromocion;}
 
-    public Imagen getImagenPromocional() {return imagenPromocional;}
+    @Override
+    public String toString() {
+        return " denominacion='" + denominacion + ", fechaDesde=" + fechaDesde + ", fechaHasta=" + fechaHasta + ", horaDesde=" + horaDesde + ", horaHasta=" + horaHasta + ", descripcion='" + descripcionDescuento + ", precioPromocional=" + precioPromocional + ", tipoPromocion=" + tipoPromocion + "\n" +
+                "   Imagenes=" + imagenes + "\n" +
+                "   ListaArticulos=" + articulos;
+    }
 
-    public void setImagenPromocional(Imagen imagenPromocional) {this.imagenPromocional = imagenPromocional;}
 }

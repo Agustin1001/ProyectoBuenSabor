@@ -42,7 +42,7 @@ public class ArticuloManufacturado extends Articulo {
 
     @Override
     public String toString() {
-        return "\n" + "ArticuloManufacturado [" + "denominacion=" + denominacion + ", precioVenta=" + precioVenta + ",  descripcion=" + descripcion + ", tiempoEstimadoMinutos=" + tiempoEstimadoMinutos + ", preparacion=" + preparacion + ", unidadMedida=" + unidadMedida + "]" +
+        return "\n" + "ArticuloManufacturado [" + "denominacion=" + denominacion + ", precioVenta=" + precioVenta + ",  descripcion=" + descripcion + ", tiempoEstimadoMinutos=" + tiempoEstimadoMinutos + ", preparacion=" + preparacion + "]" +
                 "\n" + ",detalles=" + articuloManufacturadoDetalles + "\n";
     }
 }

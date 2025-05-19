@@ -2,37 +2,37 @@ import java.time.LocalDate;
 
 public class Factura {
     private LocalDate fechaFacturacion;
-    private int mpPaymetid;
-    private int mpMechantOrderId;
+    private Integer mpPaymentId;
+    private Integer mpMerchantOrderId;
     private String mpPreferenceId;
-    private String mpPaymenType;
+    private String mpPaymentType;
     private FormaPago formaPago;
-    private double totalVenta;
-
-// Constructores
+    private Double totalVenta;
 
     public Factura() {
     }
-
-    public Factura(LocalDate fechaFacturacion, int mpPaymetid, FormaPago formaPago, int mpMechantOrderId) {
+    public Factura(LocalDate fechaFacturacion, Integer mpPaymentId, Integer mpMerchantOrderId, String mpPreferenceId,
+                   String mpPaymentType, FormaPago formaPago, Double totalVenta) {
         this.fechaFacturacion = fechaFacturacion;
-        this.mpPaymetid = mpPaymetid;
-        this.formaPago = formaPago;
-        this.mpMechantOrderId = mpMechantOrderId;
-    }
-
-    public Factura(double totalVenta, FormaPago formaPago, String mpPaymenType, String mpPreferenceId, int mpMechantOrderId, int mpPaymetid, LocalDate fechaFacturacion) {
-        this.totalVenta = totalVenta;
-        this.formaPago = formaPago;
-        this.mpPaymenType = mpPaymenType;
+        this.mpPaymentId = mpPaymentId;
+        this.mpMerchantOrderId = mpMerchantOrderId;
         this.mpPreferenceId = mpPreferenceId;
-        this.mpMechantOrderId = mpMechantOrderId;
-        this.mpPaymetid = mpPaymetid;
-        this.fechaFacturacion = fechaFacturacion;
+        this.mpPaymentType = mpPaymentType;
+        this.formaPago = formaPago;
+        this.totalVenta = totalVenta;
     }
 
-
-// Getters y Setters
+    @Override
+    public String toString() {
+        return "Factura " + "\n" +
+                "  fechaFacturacion=" + fechaFacturacion + "\n" +
+                "  mpPaymentId=" + mpPaymentId + "\n" +
+                "  mpMerchantOrderId=" + mpMerchantOrderId + "\n" +
+                "  mpPreferenceId='" + mpPreferenceId + "\n" +
+                "  mpPaymentType='" + mpPaymentType + "\n" +
+                "  formaPago=" + formaPago + "\n" +
+                "  totalVenta=" + totalVenta + "\n";
+    }
 
     public LocalDate getFechaFacturacion() {return fechaFacturacion;}
 
@@ -61,4 +61,5 @@ public class Factura {
     public double getTotalVenta() {return totalVenta;}
 
     public void setTotalVenta(double totalVenta) {this.totalVenta = totalVenta;}
+
 }
